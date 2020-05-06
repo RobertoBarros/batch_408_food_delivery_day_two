@@ -1,0 +1,17 @@
+class MealsView
+  def ask_name
+    puts 'What\'s the meal name?'
+    gets.chomp
+  end
+
+  def ask_price
+    puts 'Enter the meal price:'
+    gets.chomp.to_i
+  end
+
+  def list(meals)
+    meals.each do |meal|
+      puts "ID: #{meal.id} | #{meal.name} - $#{meal.price}"
+    end
+  end
+end
